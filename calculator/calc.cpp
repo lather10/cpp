@@ -1,77 +1,75 @@
 #include<iostream>
-using namespace std;
+//using namespace std;
 int main()
 {
     double a,b,c;
     int n;
 
-    cout<<"\n$$$ ENTER NUMERICAL VALUES ONLY TO PERFORM OPERATION AS IT IS CALCULATOR: $$$"<<endl;
-    cout<<"----------------------------------------------------------------------------------------\n";
+    std::cout<<"\n$$$ ENTER NUMERICAL VALUES ONLY TO PERFORM OPERATION AS IT IS CALCULATOR: $$$";
+    std::cout<<"\n----------------------------------------------------------------------------------------\n";
 
-
-    cout<<"Enter First Number"<<endl;
-    cin>>a;
-
-    cout<<"Enter second Number"<<endl;
-    cin>>b;
-
-    cout<<"----------------------------------------------------------------------------------------\n";
-
-
-    cout<<"First number is: "<<a<<endl;
-    cout<<"Second number is: "<<b<<endl;
-
-    cout<<"----------------------------------------------------------------------------------------\n";
-
-    cout<<"Press 1 for Addition \n"<<endl;
-    cout<<"Press 2 for Subtraction \n"<<endl;
-    cout<<"Press 3 for Multiplication \n"<<endl;
-    cout<<"Press 4 for Division \n"<<endl;
-    cout<<"Enter 5 to exit\n";
-    cout<<"----------------------------------------------------------------------------------------\n";
-    cin>>n;
-    cout<<"\n";
-    cout<<"You have chosen option: "<<"***"<<n<<"***";
+    std::cout<<"Press 1 for Addition \n";
+    std::cout<<"\nPress 2 for Subtraction \n";
+    std::cout<<"\nPress 3 for Multiplication \n";
+    std::cout<<"\nPress 4 for Division \n";
+    std::cout<<"\nEnter 5 to exit\n";
+    std::cout<<"----------------------------------------------------------------------------------------\n";
+    std::cin>>n;
+    std::cout<<"\n";
+    std::cout<<"You have chosen option: "<<"***"<<n<<"***\n";
     //cout<<"----------------------------------------------------------------------------------------\n";
-    cout<<" And Here is the result printed below: \n"<<endl;
+    std::cout<<"\nEnter First Number\n";
+    std::cin>>a;
+
+    std::cout<<"\nEnter second Number\n";
+    std::cin>>b;
+
+    std::cout<<"----------------------------------------------------------------------------------------";
+
+
+    std::cout<<"\nFirst number is: "<<a;
+    std::cout<<"\nSecond number is: "<<b;
+
+    std::cout<<"\n----------------------------------------------------------------------------------------";
+    std::cout<<"\nAnd Here is the result printed below: \n";
     while(n!=5)
     {
     switch(n)
     {
     case 1:
-        cout<<"Addition of numbers is: ";
+        std::cout<<"Addition of numbers is: ";
         c=a+b;
-        cout<<c<<endl<<endl;
+        std::cout<<c<<"\n";
         break;
     case 2:
-        cout<<"Subtraction of numbers is: ";
+        std::cout<<"Subtraction of numbers is: ";
         c=a-b;
-        cout<<c<<endl<<endl;
+        std::cout<<c<<"\n";
         break;
 
     case 3:
-        cout<<"Multiplication of numbers is: ";
+        std::cout<<"Multiplication of numbers is: ";
         c=a*b;
-        cout<<c<<endl<<endl;
+        std::cout<<c<<"\n";
         break;
 
     case 4:
 
-        cout<<"Division of numbers is: ";
+        std::cout<<"Division of numbers is: ";
         c=a/b;
-        cout<<c<<endl<<endl;
+        std::cout<<c<<"\n";
         break;
 
     case 5:
         break;
 
     default:
-        cout<<" Wrong choice,Choose from given options only: "<<endl;
+        std::cout<<" Wrong choice,Choose from given options only: \n";
         break;
     }
-    cout<<"**************************************************************************************"<<endl;
-    cout<<"Enter choice again \n:: ";
-    cin>>n;
+    std::cout<<"**************************************************************************************\n";
+    std::cout<<"Enter choice again \n:: ";
+    std::cin>>n;
 
     }
        return 0;
