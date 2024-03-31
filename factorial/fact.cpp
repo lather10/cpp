@@ -1,5 +1,5 @@
 #include<iostream>
-uint64_t fact(uint64_t n)
+uint64_t fact(int n)
 {
 if(n==0)
     {
@@ -9,23 +9,28 @@ if(n==0)
     {
             return n*fact(n-1);
     }
+
 }
 int main()
 {
     uint64_t result;
     int input;
     std::cout<<"Enter a positive Integer to find Factorial: ";
-    std::cin>>input;
-    std::cout<<"\n";
-    if(input>=0)
+    while(!(std::cin>>input))
     {
-     result=fact(input);
+        std::cout<<"\nEnter positive Integer: ";
+        std::cin.clear();
+        std::cin.ignore(123,'\n');
+    }
+    if(input<0)
+    {
+    std::cout<<"\nEnter positive number only\n";
     }
     else
     {
-        std::cout<<"\nXXX Do not enter negative Integer XXX\n";
-        return 0;
+    result=fact(input);
+    std::cout<<"\nNumber entered to find the factorial is: "<<input<<"\n";
+    std::cout<<"\nFactorial of number is: "<<result<<"\n";
     }
-    std::cout<<"Factorial of number is: "<<result<<"\n";
     return 0;
 }
