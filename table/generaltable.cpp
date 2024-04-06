@@ -20,7 +20,7 @@ int main()
     {
         std::cout<<"\nEnter Number only \n";
         std::cin.clear();
-        std::cin.ignore(123,'\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
     }
     table(num);
     return 0;
